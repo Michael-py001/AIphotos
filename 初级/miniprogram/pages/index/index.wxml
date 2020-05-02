@@ -1,0 +1,24 @@
+<view class="body">
+  <!-- 顶部 -->
+  <view class="top_text">
+    <text>上传图片，会自动显示图片的主要特征标签</text>
+  </view>
+  <!-- 中间 -->
+  <view class="middle">
+    <!--重点 设置mode="aspectFit"  -->
+    <image src="{{img}}" mode="aspectFit"></image>
+  </view>
+  <!-- 标签显示 -->
+  <view class="label_wrap">
+    <block wx:for="{{labels}}" wx:key="index">
+      <view class="label">{{item.name}}</view>
+    </block>
+  </view>
+  <!-- 底部 -->
+  <view class="footer">
+    <view class="footer_content" bindtap="upload_img">
+      <image src="/images/img/cloud_upload.png" class="upload"></image>
+      <text>上传</text>
+    </view> 
+  </view>
+</view>
